@@ -32,6 +32,7 @@ class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnail = CloudinaryField('image', default='placeholder')
     categories = models.ManyToManyField(Category)
+    status = models.IntegerField(choices=STATUS, default=0)
     featured = models.BooleanField()
 
     def __str__(self):
