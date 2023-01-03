@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 from .models import Post
 from marketing.models import Signup
@@ -12,17 +13,34 @@ def index(request):
         new_signup = Signup()
         new_signup.email = email
         new_signup.save()
-        3
+
     context = {
         'object_list': featured,
         'latest': latest
     }
-    return render(request, 'index.html', {context})
+    return render(request, 'index.html', context)
 
 
 def blog(request):
+    most_recent = Post.objects.order_by('-timestamp')[:3]
+    post_list = Post.objects.all()
+    paginator = Paginator(post_list, 1)
+    page_request_var = 'page'
+    page = request.GET.get(page_request_var)
+    try:
+        paginated_queryset = paginator.page(page)
+    except PageNotAnInteger:
+        paginated_queryset = paginator.page(1)
+    except EmptyPage:
+        paginated_queryset = paginator.page(paginator.num_pages)
+
+    context = {
+        'queryset': paginated_queryset,
+        'most_recent': most_recent,
+        'page_request_var': page_request_var
+    }
     return render(request, 'blog.html', {})
 
 
-def post(request):
+def post(request, id):
     return render(request, 'post.html', {})
