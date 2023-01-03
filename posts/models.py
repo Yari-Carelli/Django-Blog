@@ -38,6 +38,8 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category)
     status = models.IntegerField(choices=STATUS, default=0)
     featured = models.BooleanField()
+    previous_post = models.ForeignKey('self', related_name='previuos', on_delete=models.SET_NULL, blank=True, null=True)
+    next_post = models.ForeignKey('self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
         return self.title
