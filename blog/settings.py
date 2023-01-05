@@ -71,6 +71,19 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'blog.urls'
 
+# Django Allauth
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+LOGIN_REDIRECT_URL = '/'
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -183,13 +196,3 @@ TINYMCE_DEFAULT_CONFIG = {
     'menubar': True,
     'statusbar': True,
     }
-
-# Django Allauth
-
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-]

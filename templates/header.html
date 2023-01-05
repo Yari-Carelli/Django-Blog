@@ -37,6 +37,16 @@
               <li class="nav-item"><a href="{% url 'post-create' %}" class="nav-link ">Create</a>
               </li>
               {% endif %}
+              {% if request.user.is_authenticated %}
+              Signed in as: {{ request.user.username }}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+              </li>
+              {% endif %}
             </ul>
             <div class="navbar-text"><a href="#" class="search-btn"><i class="icon-search-1"></i></a></div>
           </div>

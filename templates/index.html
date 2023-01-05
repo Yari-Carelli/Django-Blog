@@ -110,10 +110,10 @@
           </div>
           <div class="col-md-8">
             <div class="form-holder">
-              <form action="{% url 'email-list-signup' %}" method="POST">
+              <form action="." method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                    {{ form }}
+                  <input class="form-control p-3" type="email" name="email" id="email" placeholder="Type your email address">
                     <button type="submit" class="submit">Signup</button>
                 </div>
               </form>
