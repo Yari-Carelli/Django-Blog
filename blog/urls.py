@@ -29,5 +29,6 @@ urlpatterns = [
     path('post/<id>', post, name='post-detail'),
     path('post/<id>/update/', post_update, name='post-update'),
     path('post/<id>/delete/', post_delete, name='post-delete'),
-    path('tinymce/', include('tinymce.urls'))
+    path('tinymce/', include('tinymce.urls')),
+    path('accounts/', include('allauth.urls'))
 ]
