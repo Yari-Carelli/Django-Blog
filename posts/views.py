@@ -14,7 +14,7 @@ def get_author(user):
 
 
 def search(request):
-    queryset = Post-objects.all()
+    queryset = Post.objects.all()
     query = request.GET.get('q')
     if query:
         queryset = queryset.filter(
@@ -112,11 +112,11 @@ def post_create(request):
             return redirect(reverse("post-detail", kwargs={
                 'id': form.instance.id
             }))
-        context = {
-            'title': title,
-            'form': form
-        }
-        return render(request, "post_create.html", context)
+    context = {
+        'title': title,
+        'form': form
+    }
+    return render(request, "post_create.html", context)
 
 
 def post_update(request, id):
@@ -124,7 +124,8 @@ def post_update(request, id):
     post = get_object_or_404(Post, id=id)
     form = PostForm(
         request.POST or None,
-        request.FILES or None, instance=post)
+        request.FILES or None,
+        instance=post)
     author = get_author(request.user)
     if request.method == "POST":
         if form.is_valid():
@@ -133,11 +134,11 @@ def post_update(request, id):
             return redirect(reverse("post-detail", kwargs={
                 'id': form.instance.id
             }))
-        context = {
-            'title': title,
-            'form': form
-        }
-        return render(request, "post_create.html", context)
+    context = {
+        'title': title,
+        'form': form
+    }
+    return render(request, "post_create.html", context)
 
 
 def post_delete(request, id):

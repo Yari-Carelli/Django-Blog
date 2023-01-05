@@ -27,18 +27,24 @@
           <!-- Navbar Menu -->
           <div id="navbarcollapse" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="/" class="nav-link ">Home</a>
+              <li class="nav-item">
+                <a href="/" class="nav-link active">Home</a>
               </li>
-              <li class="nav-item"><a href="/blog" class="nav-link active ">Blog</a>
+              <li class="nav-item">
+                <a href="/blog" class="nav-link active">Blog</a>
               </li>
-              <li class="nav-item"><a href="#" class="nav-link ">Contact</a>
+              <li class="nav-item">
+                <a href="#!" class="nav-link">Contact</a>
               </li>
               {% if request.user.is_staff %}
-              <li class="nav-item"><a href="{% url 'post-create' %}" class="nav-link ">Create</a>
+              <li class="nav-item">
+                <a href="{% url 'post-create' %}" class="nav-link">Create</a>
               </li>
               {% endif %}
               {% if request.user.is_authenticated %}
-              Signed in as: {{ request.user.username }}
+              <li class="nav-item">
+                <a href="#" class="nav-link">Signed in as: {{ request.user.username }}</a
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
               </li>
