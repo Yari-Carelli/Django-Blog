@@ -36,6 +36,7 @@ class Comment(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     post = models.ForeignKey('Post', related_name='comments', on_delete=models.CASCADE)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.user.username
@@ -79,7 +80,7 @@ class Post(models.Model):
 
     @property
     def get_comments(self):
-        return self.comments.all().order_by('-timestamp')
+        return Comment.objects.filter(post=self, approved=True).order_by('-timestamp')
 
     @property
     def comment_count(self):
