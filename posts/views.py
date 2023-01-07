@@ -1,4 +1,5 @@
 from django.db.models import Count, Q
+from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Post, Author, PostView
@@ -89,6 +90,7 @@ def post(request, id):
             form.instance.user = request.user
             form.instance.post = post
             form.save()
+            messages.success(request, "Your message is awaiting approval.")
             return redirect(reverse("post-detail", kwargs={
                 'id': post.id
             }))
