@@ -45,6 +45,7 @@ def index(request):
         new_signup = Signup()
         new_signup.email = email
         new_signup.save()
+        messages.info(request, "Successfully subscribed")
 
     context = {
         'object_list': featured,
