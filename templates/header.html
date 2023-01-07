@@ -36,14 +36,12 @@
               <li class="nav-item">
                 <a href="#!" class="navbar-brand">Contact</a>
               </li>
-              {% if request.user.is_staff %}
+              {% if request.user.is_authenticated %}
               <li class="nav-item">
                 <a href="{% url 'post-create' %}" class="navbar-brand">Create</a>
               </li>
-              {% endif %}
-              {% if request.user.is_authenticated %}
               <li class="nav-item">
-                <a href="#" class="nav-link active">Signed in as: {{ request.user.username }}</a
+                <a href="#" class="nav-link active">Signed in as: {{ request.user.username }}</a>
               </li>
               <li class="nav-item">
                 <a class="navbar-brand" href="{% url 'account_logout' %}">Sign Out</a>
