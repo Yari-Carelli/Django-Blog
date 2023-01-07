@@ -42,9 +42,6 @@ class Comment(models.Model):
         return self.user.username
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
-
 class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField()
@@ -55,7 +52,6 @@ class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     thumbnail = CloudinaryField('image', default='placeholder')
     categories = models.ManyToManyField(Category)
-    status = models.IntegerField(choices=STATUS, default=0)
     featured = models.BooleanField()
     previous_post = models.ForeignKey('self', related_name='previuos', on_delete=models.SET_NULL, blank=True, null=True)
     next_post = models.ForeignKey('self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
