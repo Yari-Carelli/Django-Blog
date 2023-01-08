@@ -1,108 +1,317 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Django Blog
+A simple, fully-functional blog built with Django and Bootstrap4.
 
-Welcome Yari-Carelli,
+#
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img width="700" src="">
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+#
 
-## Gitpod Reminders
+The live link for the project can be found [HERE]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#
 
-`python3 -m http.server`
+## Table of Contents
++ [UX](#ux "UX")
+  + [Project Purpose](#project-purpose "Project Purpose")
+  + [Overview](#overview "Overview")
+  + [Communication](#communication "Communication")
+  + [Site Goals](#site-goals "Site Goals")
+  + [Current User Goals](#current-user-goals "Current User Goals")
+  + [New User Goals](#new-user-goals "New User Goals")
++ [User Stories](#user-stories "User Stories")
+  + [Admin Stories](#admin-stories "Admin stories")
+  + [User Stories](#user-stories "User stories")
++ [Design](#design "Design")
+  + [Wireframes](#wireframes "Wireframes")
+  + [Typography](#typography "Typography")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
++ [Testing](#testing "Testing")
+  + [Manual Testing](#manual-testing "Manual Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Technologies Used](#technologies-used "Technologies Used")
+  + [Main Languages Used](#main-languages-used "Main Languages Used")
+  + [Frameworks, Libraries & Programs Used](#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
++ [Deployment](#deployment "Deployment")
++ [Credits](#credits "Credits")
 
-A blue button should appear to click: _Make Public_,
+#
 
-Another blue button should appear to click: _Open Browser_.
+## UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Project Purpose:
+The purpose of the project is to get a general idea about the working of Django by learning how to build a blog with all the common functionalities such as registering, posting, commenting, and showing a view count.
+Building a blog is an excellent first step to get a good grasp over this open-source web framework, written in Python, that follows the model-view-template architectural pattern.
 
-A blue button should appear to click: _Make Public_,
+### Learning Outcomes:
+1. Create a database-backed Django project and deploy it to Heroku
+2. Host uploaded images on a cloud provider
+3. Create class-based views in a Django project
+4. Use built-in Django generic views
+5. Add an authentication back-end
+6. Create custom database models
+7. Add extra interactivity with Javascript
 
-Another blue button should appear to click: _Open Browser_.
+### Overview
+This Blog application built with Django allows users to create, edit and delete posts, and leave comments on a post.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+A blog is a web page that is update on a regular basis. Within a blog, registered users share long-form articles that cover topics the target audience may want to read or learn about. It can also include hyperlinks to internal or external web pages to enhance users' experience. Adding images or videos can also make reading your blog a more engaging experience.
 
-To log into the Heroku toolbelt CLI:
+- Pages included
+  - Homepage, with a hero image, intro section, featured and latest posts sections, and a parallax divider section
+  - Category listing with a widgets column
+  - Blog page, with a list of all the blog posts, each paginated on a different page
+  - Post page, displaying the post's content 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Communication:
+With a clean, easy to follow layout, the users are guided through the features of the website with an ease of navigation.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Site Goals:
+The main goal of a blog is to attract future readers and keep them interested, and to keep current users satisfied and engaged. Coming up with fresh topics can encourage people to keep coming back to the website to read your blog, and register to share their own content and leave comments on posts to be involved in the conversation.
 
-------
+### Current User Goals
+Site users purpose is to read about topics they are interested in, and share their views on an individual subject either by posting new content or commenting on existing posts.
 
-## Release History
+### New User Goals
+To become instantly engaged with the design of the site, and feel intrigued to explore all it has to offer.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## User Stories
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Admin Stories:
+#### As the Site Admin:
+1. I can add, edit and delete posts so that I can manage the blog content.
+2. I can add, edit and delete authors so that I can select which site users can create posts.
+3. I can add, edit and delete categories so that I can manage the topics discussed in the blog.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### User Stories:
+#### As a Site User:
+1. I can register an account so that I can create posts and submit comments.
+2. I can view featured and latest posts so that I can recognize what content is either important or has been recently added to the website.
+3. I can view a list of all the posts so that I can select which post to open.
+4. I can click on a post so that I can read its content.
+5. I can edit my posts' details so that I can make corrections or update my posts after they were created.
+6. I can delete my posts so that I can remove posts from the website after they were created.
+7. As a Site User I can leave comments on a post so that be involved in the conversation.
+8. As the Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
+9. I can use the search bar to quickly fetch the posts I am interested in.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Design
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The blog's design is minimalistic, and almost all elements are in black and white. It contains 3 HTML page templates, all of them in 7 color variants (pink, red, blue, green, blue, violet, sea blue.). The default color variant is grey.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Wireframes:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+##### Homepage
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<img width="700" src="">
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##### Blog Page
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<img width="700" src="">
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+##### Post Page
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<img width="700" src="">
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+##### Site Navigation:
 
-------
+<img width="700" src="">
 
-## FAQ about the uptime script
+### Database Schema
 
-**Why have you added this script?**
+<img width="700" src="">
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### Typography:
+The font used for the website is the "Open Sans", sans-serif, and was obtained from the Google Fonts library.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Features
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Existing Features
 
-**So….?**
+#### Homepage
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<img width="700" src="">
 
-**Can I opt out?**
+#### Navigation Bar
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<img width="700" src="">
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+##### Blog Page
 
-**Anything more?**
+<img width="700" src="">
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+##### Post Page
 
----
+<img width="700" src="">
 
-Happy coding!
+#### Newsletter
+
+<img width="700" src="">
+
+#### Sidebar Widgets
+
+<img width="700" src="">
+
+#### Search Bar
+
+<img width="700" src="">
+
+#### Footer
+
+<img width="700" src="">
+
+#### Register Page
+
+<img width="700" src="">
+
+#### Sign In Page
+
+<img width="700" src="">
+
+##### Sign Out Page
+
+<img width="700" src="">
+
+##### Create Post Form
+
+<img width="700" src="">
+
+##### Update Post Form
+
+<img width="700" sr="">
+
+##### Delete Post Page
+
+<img width="700" src="">
+
+##### Comments Section
+
+<img width="700" src="">
+
+### Features Left to Implement
+
+#
+
+## Testing
+
+### Manual Testing
+
+- CRUD functionality has been tested for each of the Posts.
+ - Comments may only be created.
+- All navlinks direct to the correct page.
+- Buttons to allow users to edit/delete posts only appear on posts that they have created.
+- Users are able to register a new account.
+- Users with an existing account are able to sign in.
+- Each user has the ability to sign out.
+- Site tested using different browsers: opens in Brave, Chrome and Safari without issues.
+- All social links open to external pages as intended.
+
+### Validator Testing
+- html files pass through the [Nu HTML Checker](https://validator.w3.org/nu/) with no html issues found
+- Errors listed only reference {%%} & {{}} tags.
+
+<img width="500" src="">
+
+- CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+
+<img width="500" src="">
+
+- Lighthouse Results
+
+<img width="500" src="">
+
+- Python files passed through [CI Python Linter](https://pep8ci.herokuapp.com/) with no issues found.
+
+<img width="500" src="">
+
+### Unfixed Bugs
+
+To the best of my knowledge, no bugs exist in the website in its current state.
+
+#
+
+## Technologies Used
+
+### Main Languages Used
+
+- HTML5
+- CSS3
+- Javascript
+- Python
+
+### Frameworks, Libraries & Programs Used
+
+- Google Fonts (https://fonts.google.com/)
+- Font Awesome (https://fontawesome.com/)
+- GitPod
+- GitHub (https://github.com/)
+- Balsamiq (https://balsamiq.com)
+- Am I Responsive? (https://ui.dev/amiresponsive)
+- Bootstrap4 (https://getbootstrap.com/)
+- Django (https://www.djangoproject.com/)
+- DrawSQL (https://drawsql.app/)
+- TinyMCE (https://www.tiny.cloud/)
+- ElephantSQL (https://www.elephantsql.com/)
+- Heroku (https://dashboard.heroku.com/)
+- Pexels (https://www.pexels.com/)
+
+### Installed Packages
+
+- 'django<4' gunicorn
+- dj_database_url psycopg2
+- dj3-cloudinary-storage
+- django-allauth [(link)](https://django-allauth.readthedocs.io/en/latest/)
+- django-crispy-forms[(link)](https://django-crispy-forms.readthedocs.io/en/latest/index.html)
+
+#
+
+## Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+- Install Django & Gunicorn:
+```pip3 install 'django<4' gunicorn```
+- Install Django database & psycopg:
+```pip3 install dj_database_url psycopg2```
+- Install Cloudinary:
+```pip3 install dj3-cloudinary-storage```
+- Creating the requirements.txt file with the following command:
+```pip3 freeze --local > requirements.txt```
+- a django project was created using:
+```django-admin startproject PROJECT_NAME .```
+- the blog app was then created with:
+```python3 manage.py startapp app_name```
+- which was then added to the settings.py file within our project directory.
+- the changes were then migrated using:
+```python3 manage.py migrate```
+- navigated to [Heroku](www.heroku.com) and created a new app called 'django-blog-yc'.
+- added the Heroku Postgres database to the Resources tab.
+- navigated to the Settings Tab, to add the following key/value pairs to the configvars:
+1. key: SECRET_KEY | value: randomkey
+2. key: PORT | value: 8000
+3. key: CLOUDINARY_URL | value: API environment variable
+4. key: DATABASE_URL | value: value supplied by Heroku
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- add an import os statement for the env.py file.
+- added Heroku to the ALLOWED_HOSTS in settings.py
+- created the Procfile
+- pushed the project to Github
+- connected my github account to Heroku through the Deploy tab
+- connected my github project repository, and then clicked on the "Deploy" button
+
+#
+
+## Credits
+
+- Mentor [Martina Terlevic](https://github.com/SephTheOverwitch), a constant source of support, providing reassurance, precious advice and patient guidance.
+- Code Institute, for providing the “I think therefore I blog” walkthrough project.
+- [Stackoverflow](https://stackoverflow.com), an immense source of solutions to every sort of issue, big or small.
