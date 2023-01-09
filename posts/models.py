@@ -35,7 +35,8 @@ class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
-    post = models.ForeignKey('Post', related_name='comments', on_delete=models.CASCADE)
+    post = models.ForeignKey(
+        'Post', related_name='comments', on_delete=models.CASCADE)
     approved = models.BooleanField(default=False)
 
     def __str__(self):
@@ -53,8 +54,10 @@ class Post(models.Model):
     thumbnail = CloudinaryField('image', default='placeholder')
     categories = models.ManyToManyField(Category)
     featured = models.BooleanField()
-    previous_post = models.ForeignKey('self', related_name='previuos', on_delete=models.SET_NULL, blank=True, null=True)
-    next_post = models.ForeignKey('self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
+    previous_post = models.ForeignKey(
+        'self', related_name='previuos', on_delete=models.SET_NULL, blank=True, null=True)
+    next_post = models.ForeignKey(
+        'self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
         return self.title
