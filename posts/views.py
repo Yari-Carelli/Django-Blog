@@ -115,7 +115,7 @@ def blog(request):
         'queryset': paginated_queryset,
         'most_recent': most_recent,
         'page_request_var': page_request_var,
-        'category_count': category_count,
+        'category_count': category_count
     }
     return render(request, 'blog.html', context)
 

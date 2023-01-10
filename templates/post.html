@@ -23,10 +23,10 @@
                     <a href="#!">{{ cat }}</a>
                     {% endfor %}
                   </div>
-                  {% if request.user.is_staff %}
+                  {% if request.user.is_authenticated %}
                   <div>
-                    <a href="{% url 'post-update' id=post.id %}">Update</a>
-                    <a href="{% url 'post-delete' id=post.id %}">Delete</a>
+                    <a href="{% url 'post-update' id=post.id %}"><i class="fa fa-pencil"></i>    |</a>
+                    <a href="{% url 'post-delete' id=post.id %}"><i class="fa fa-trash"></i></a>
                   </div>
                   {% endif %}
                 </div>

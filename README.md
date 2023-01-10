@@ -15,6 +15,7 @@ The live link for the project can be found [HERE]()
 + [UX](#ux "UX")
   + [Project Purpose](#project-purpose "Project Purpose")
   + [Overview](#overview "Overview")
+  + [Audience](#audience "Audience")
   + [Communication](#communication "Communication")
   + [Site Goals](#site-goals "Site Goals")
   + [Current User Goals](#current-user-goals "Current User Goals")
@@ -23,7 +24,8 @@ The live link for the project can be found [HERE]()
   + [Admin Stories](#admin-stories "Admin stories")
   + [User Stories](#user-stories "User stories")
 + [Design](#design "Design")
-  + [Wireframes](#wireframes "Wireframes")
+  + [Site Map](#site-map "Site Map")
+  + [Database Scheme](#database-schema "Database Schema")
   + [Typography](#typography "Typography")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
@@ -65,10 +67,14 @@ A blog is a web page that is update on a regular basis. Within a blog, registere
   - Blog page, with a list of all the blog posts, each paginated on a different page
   - Post page, displaying the post's content 
 
-### Communication:
+### Audience
+The blog does note have a specific theme and does not target an audience of a certain type or with a specific interest other than that of sharing ideas and points of view, ranging from topics of variuos kinds, being able to assign one or more of the available categories to the posts upon publishing them.
+Also, amateur writers may find in the blog the perfect space to cultivate their passion for writing and get feedback from other site users through the comment system. 
+
+### Communication
 With a clean, easy to follow layout, the users are guided through the features of the website with an ease of navigation.
 
-### Site Goals:
+### Site Goals
 The main goal of a blog is to attract future readers and keep them interested, and to keep current users satisfied and engaged. Coming up with fresh topics can encourage people to keep coming back to the website to read your blog, and register to share their own content and leave comments on posts to be involved in the conversation.
 
 ### Current User Goals
@@ -81,6 +87,7 @@ To become instantly engaged with the design of the site, and feel intrigued to e
 
 ## User Stories
 
+**Done:**
 ### Admin Stories:
 #### As the Site Admin:
 1. I can add, edit and delete posts so that I can manage the blog content.
@@ -99,37 +106,27 @@ To become instantly engaged with the design of the site, and feel intrigued to e
 8. As the Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
 9. I can use the search bar to quickly fetch the posts I am interested in.
 
+**Todo:**
+#### As a Site User:
+10. I can use the contact form to submit enquiries to the site's staff members.
+
 #
 
 ## Design
 
 The blog's design is minimalistic, and almost all elements are in black and white. It contains 3 HTML page templates, all of them in 7 color variants (pink, red, blue, green, blue, violet, sea blue.). The default color variant is grey.
 
-### Wireframes:
+### Site Map
 
-##### Homepage
-
-<img width="500" src="">
-
-##### Blog Page
-
-<img width="500" src="">
-
-##### Post Page
-
-<img width="500" src="">
-
-##### Site Navigation:
-
-<img width="500" src="">
+<img width="600" src="static/screenshots/site_map.png">
 
 ### Database Schema
 
-<img width="500" src="">
+<img width="600" src="static/screenshots/database_schema.png">
 
 
 ### Typography:
-The font used for the website is the "Open Sans", sans-serif, and was obtained from the Google Fonts library.
+The font used for the website is the "Open Sans - sans-serif", and was obtained from the Google Fonts library.
 
 #
 
@@ -139,59 +136,59 @@ The font used for the website is the "Open Sans", sans-serif, and was obtained f
 
 #### Homepage
 
-<img width="500" src="static/screenshots/homepage.png">
+<img width="600" src="static/screenshots/homepage.png">
 
 #### Navigation Bar
 
-<img width="500" src="static/screenshots/navbar.png">
+<img width="600" src="static/screenshots/navbar.png">
 
 #### Dropdown Menu
 
-<img width="500" src="static/screenshots/dropdown_menu.png">
+<img width="600" src="static/screenshots/dropdown_menu.png">
 
-##### Blog Page
+#### Blog Page
 
-<img width="500" src="static/screenshots/blog_page.png">
+<img width="600" src="static/screenshots/blog_page.png">
 
-##### Post Page
+#### Post Page
 
-<img width="500" src="static/screenshots/post_page.png">
+<img width="600" src="static/screenshots/post_page.png">
 
 #### Latest Posts & Categories Widgets
 
-<img width="500" src="static/screenshots/sidebar.png">
+<img width="300" height="600" src="static/screenshots/sidebar.png">
 
 #### Search Widget
 
-<img width="500" src="static/screenshots/search_widget.png">
+<img width="600" src="static/screenshots/search_widget.png">
 
 #### Footer
 
-<img width="500" src="static/screenshots/footer.png">
+<img width="600" src="static/screenshots/footer.png">
 
 #### Register Page
 
-<img width="500" src="static/screenshots/register_page.png">
+<img width="600" src="static/screenshots/register_page.png">
 
 #### Sign In Page
 
-<img width="500" src="static/screenshots/sign_in_page.png">
+<img width="600" src="static/screenshots/sign_in_page.png">
 
-##### Sign Out Page
+#### Sign Out Page
 
-<img width="500" src="static/screenshots/sign_out_page.png">
+<img width="600" src="static/screenshots/sign_out_page.png">
 
-##### Create Post Page
+#### Create Post Page
 
-<img width="500" src="static/screenshots/create_post_page.png">
+<img width="600" src="static/screenshots/create_post_page.png">
 
-##### Update Post Page
+#### Update Post Page
 
-<img width="500" src="static/screenshots/update_post_page.png">
+<img width="600" src="static/screenshots/update_post_page.png">
 
-##### Comments Section
+#### Comments Section
 
-<img width="500" src="static/screenshots/comments_section.png">
+<img width="600" src="static/screenshots/comments_section.png">
 
 ### Features Left to Implement
 
@@ -199,6 +196,7 @@ The font used for the website is the "Open Sans", sans-serif, and was obtained f
 - Newsletter subscription form
 - Like/Unlike posts/comments
 - Tags widget
+- Contact form where users can enter their name, email address, and message, and the website will email the message to the staff (with the user's email as the reply-to.)
 
 #
 
@@ -220,23 +218,35 @@ The font used for the website is the "Open Sans", sans-serif, and was obtained f
 - html files pass through the [W3C Markup Validation Service](https://validator.w3.org/) with no html issues found
 - Errors listed only reference {%%} and {{}} tags.
 
-<img width="500" src="static/screenshots/w3c_html_validator.png">
+<img width="600" src="static/screenshots/w3c_html_validator.png">
 
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
 
-<img width="500" src="static/screenshots/w3c_css_validator.png">
-
-- Lighthouse Results
-
-<img width="500" src="static/screenshots/lighthouse_report_desktop.png">
-
-<img width="500" src="static/screenshots/lighthouse_report_mobile.png">
+<img width="600" src="static/screenshots/w3c_css_validator.png">
 
 - Python files passed through [CI Python Linter](https://pep8ci.herokuapp.com/) with no issues found.
 Results referencing "E501 line too long" errors have been deliberately ignored as they do not affect code functionality.
 
-<img width="500" src="static/screenshots/pep8ci_settings.py.png">
-<img width="500" src="static/screenshots/pep8ci_posts/models.png">
+posts > models.py
+
+<img width="600" src="static/screenshots/pep8ci_posts_models.png">
+
+blog > settings.py
+
+<img width="600" src="static/screenshots/pep8ci_settings.py.png">
+
+### **Lighthouse Results**
+
+#### Desktop
+
+<img width="600" src="static/screenshots/lighthouse_report_desktop.png">
+
+### Mobile
+
+<img width="600" src="static/screenshots/lighthouse_report_mobile.png">
+
+
+
 
 ### Unfixed Bugs
 
@@ -470,4 +480,4 @@ In Heroku:
 
 - Mentor [Martina Terlevic](https://github.com/SephTheOverwitch), a constant source of support, providing reassurance, precious advice and patient guidance.
 - Code Institute, for providing the “I think therefore I blog” walkthrough project.
-- [Stackoverflow](https://stackoverflow.com), an immense source of solutions to every sort of issue, big or small.
+- [Stackoverflow](https://stackoverflow.com), an immense source of solutions to every sort of issue, big or small, and answer to every kind of question, smart or trivial.
