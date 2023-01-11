@@ -23,7 +23,7 @@
                     <a href="#!">{{ cat }}</a>
                     {% endfor %}
                   </div>
-                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_authenticated and post.author.user.username == request.user.username %}
                   <div>
                     <a href="{% url 'post-update' id=post.id %}"><i class="fa fa-pencil"></i>    |</a>
                     <a href="{% url 'post-delete' id=post.id %}"><i class="fa fa-trash"></i></a>

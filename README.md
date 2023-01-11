@@ -196,7 +196,8 @@ The font used for the website is the "Open Sans - sans-serif", and was obtained 
 - Newsletter subscription form
 - Like/Unlike posts/comments
 - Tags widget
-- Contact form where users can enter their name, email address, and message, and the website will email the message to the staff (with the user's email as the reply-to.)
+- Contact form where users can enter their name, email address, and message, and the website will email the message to the staff (with the user's email as the reply-to)
+- Use the social apps feature of AllAuth  to add single sign-on functionality using Google, Facebook, or another authentication provider
 
 #
 
@@ -481,4 +482,5 @@ In Heroku:
 - Mentor [Martina Terlevic](https://github.com/SephTheOverwitch), a constant source of support, providing reassurance, precious advice and patient guidance.
 - Code Institute, for providing the “I think therefore I blog” walkthrough project.
 - [Stackoverflow](https://stackoverflow.com), an immense source of solutions to every sort of issue, big or small, and answer to every kind of question, smart or trivial.
-- Posts' content was copied from the  following websites: [Blog about everything](https://blog-everything.com/), [AllBusiness](https://www.allbusiness.com/), [ArtLex](https://www.artlex.com/), [Nomadic Matt](https://www.nomadicmatt.com/).
+- Posts' content was borrowed from the  following websites: [Blog about everything](https://blog-everything.com/), [AllBusiness](https://www.allbusiness.com/), [ArtLex](https://www.artlex.com/), [Nomadic Matt](https://www.nomadicmatt.com/).
+- This set of youtube videos was used to convert function-based views to class-based views as an exercise: (https://www.youtube.com/playlist?list=PLOLrQ9Pn6caxNb9eFZJ6LfY29nZkKmmXT)
