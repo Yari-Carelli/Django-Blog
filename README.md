@@ -1,12 +1,6 @@
 # Django Blog
 A simple, fully-functional blog built with Django and Bootstrap4.
 
-#
-
-<img width="500" src="">
-
-#
-
 The live link for the project can be found [HERE]()
 
 #
@@ -154,9 +148,13 @@ The font used for the website is the "Open Sans - sans-serif", and was obtained 
 
 <img width="600" src="static/screenshots/post_page.png">
 
-#### Latest Posts & Categories Widgets
+#### Latest Posts Widget
 
-<img width="300" height="600" src="static/screenshots/sidebar.png">
+<img width="300" height="600" src="static/screenshots/latest_posts_widget.png">
+
+#### Categories Widget
+
+<img width="300" height="600" src="static/screenshots/categories_widget.png">
 
 #### Search Widget
 
@@ -216,8 +214,8 @@ The font used for the website is the "Open Sans - sans-serif", and was obtained 
 - All social links open to external pages as intended.
 
 ### Validator Testing
-- html files pass through the [W3C Markup Validation Service](https://validator.w3.org/) with no html issues found
-- Errors listed only reference {%%} and {{}} tags.
+- html files pass through the [W3C Markup Validation Service](https://validator.w3.org/) with no html issues found.
+- When checking by direct input, errors listed only reference {%%} and {{}} tags.
 
 <img width="600" src="static/screenshots/w3c_html_validator.png">
 
@@ -271,7 +269,6 @@ To the best of my knowledge, no bugs exist in the website in its current state.
 - GitPod
 - GitHub (https://github.com/)
 - Balsamiq (https://balsamiq.com)
-- Am I Responsive? (https://ui.dev/amiresponsive)
 - Bootstrap4 (https://getbootstrap.com/)
 - Django (https://www.djangoproject.com/)
 - DrawSQL (https://drawsql.app/)
@@ -483,4 +480,3 @@ In Heroku:
 - Code Institute, for providing the “I think therefore I blog” walkthrough project.
 - [Stackoverflow](https://stackoverflow.com), an immense source of solutions to every sort of issue, big or small, and answer to every kind of question, smart or trivial.
 - Posts' content was borrowed from the  following websites: [Blog about everything](https://blog-everything.com/), [AllBusiness](https://www.allbusiness.com/), [ArtLex](https://www.artlex.com/), [Nomadic Matt](https://www.nomadicmatt.com/).
-- This set of youtube videos was used to convert function-based views to class-based views as an exercise: (https://www.youtube.com/playlist?list=PLOLrQ9Pn6caxNb9eFZJ6LfY29nZkKmmXT)
