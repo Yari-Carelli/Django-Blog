@@ -25,6 +25,10 @@ class Author(models.Model):
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+        
     title = models.CharField(max_length=50)
 
     def __str__(self):
@@ -32,10 +36,6 @@ class Category(models.Model):
 
 
 class Comment(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Categories'
-        
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
