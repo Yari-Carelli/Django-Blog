@@ -32,6 +32,10 @@ class Category(models.Model):
 
 
 class Comment(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+        
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
