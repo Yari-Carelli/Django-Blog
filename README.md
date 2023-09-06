@@ -1,7 +1,7 @@
 # Django Blog
 A simple, fully-functional blog built with Django and Bootstrap4.
 
-The live link for the project can be found [HERE]()
+The live link for the project can be found [HERE](https://django-blog-yc.herokuapp.com/)
 
 #
 
